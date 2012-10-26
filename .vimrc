@@ -147,7 +147,8 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
-
+let g:Powerline_symbols = 'fancy'
 if has('gui_macvim')
     set transparency=5 " Make the window slightly transparent
+    set guifont=Monaco\ for\ Powerline\ Regular:h12
 endif
