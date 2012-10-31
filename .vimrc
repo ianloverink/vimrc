@@ -41,6 +41,9 @@ Bundle 'Shougo/neosnippet'
 "PHP integration env
 Bundle 'spf13/PIV'
 
+"Bundles from Vim scripts
+Bundle 'sudo.vim'
+
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""
