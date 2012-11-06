@@ -38,8 +38,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Shougo/neocomplcache'
 "Snippets for neocomplcache
 Bundle 'Shougo/neosnippet'
-"PHP integration env
-Bundle 'spf13/PIV'
 
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
