@@ -39,6 +39,9 @@ Bundle 'Shougo/neocomplcache'
 "Snippets for neocomplcache
 Bundle 'Shougo/neosnippet'
 
+"Bundles from Vim scripts
+Bundle 'sudo.vim'
+
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""
