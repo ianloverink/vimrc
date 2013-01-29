@@ -62,6 +62,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4    
 
+"change leader
+let mapleader = ','
+
 " filetype specific spacing
 autocmd Filetype php,html,c,java,cpp set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4 
 autocmd Filetype rb set expandtab tabstop=2 softtabstop=2 shiftwidth=2 
@@ -74,6 +77,20 @@ set nu
 
 "no wrap!
 set nowrap
+
+"NerdTree Config
+map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+map <leader>e :NERDTreeFind<CR>
+nmap <leader>nt :NERDTreeFind<CR>
+let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+let NERDTreeKeepTreeInNewTab=1
+autocmd VimEnter * NERDTree | wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "close nerdtree is it is last buffer
 
 " automatically close autocompletition window
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
