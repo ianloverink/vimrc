@@ -20,30 +20,30 @@ Bundle 'gmarik/vundle'
 
 "Bundles from GitHub
 
-"Better file browser
-Bundle 'scrooloose/nerdtree'
-"Code commenter
-Bundle 'scrooloose/nerdcommenter'
-"Color Scheme
-Bundle 'altercation/vim-colors-solarized'
-"Git integration
-Bundle 'tpope/vim-fugitive'
-"Powerline
-Bundle 'Lokaltog/vim-powerline'
-"Syntastic
-Bundle 'scrooloose/syntastic'
-"Ctrl P
-Bundle 'kien/ctrlp.vim'
-"NeocomplCache 
-Bundle 'Shougo/neocomplcache'
-"Snippets for neocomplcache
-Bundle 'Shougo/neosnippet'
+    "Better file browser
+    Bundle 'scrooloose/nerdtree'
+    "Code commenter
+    Bundle 'scrooloose/nerdcommenter'
+    "Color Scheme
+    Bundle 'altercation/vim-colors-solarized'
+    "Git integration
+    Bundle 'tpope/vim-fugitive'
+    "Powerline
+    Bundle 'Lokaltog/vim-powerline'
+    "Syntastic
+    Bundle 'scrooloose/syntastic'
+    "Ctrl P
+    Bundle 'kien/ctrlp.vim'
 
-Bundle 'Valloric/YouCompleteMe'
+    Bundle 'Valloric/YouCompleteMe'
 
 "Bundles from Vim scripts
-Bundle 'sudo.vim'
+    
+    "sudo vim for editing protected files
+    Bundle 'sudo.vim'
 
+
+"Config    
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""
@@ -54,7 +54,7 @@ endif
 filetype plugin on
 filetype indent on
 
-" rest of vim config
+"rest of vim config
 color solarized
 set background=dark
 
@@ -67,9 +67,10 @@ set shiftwidth=4
 "change leader
 let mapleader = ','
 
-" filetype specific spacing
+" filetype specific spacing and completion
 autocmd Filetype php,html,c,java,cpp set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4 
 autocmd Filetype rb set expandtab tabstop=2 softtabstop=2 shiftwidth=2 
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 "
 set ls=2
@@ -78,9 +79,20 @@ set ls=2
 set nu
 
 "no wrap!
-set nowrap
+set nowrap 
 
-"NerdTree Config
+"fancy color for terminal
+set term=xterm-256color
+
+syntax on
+
+set backspace=indent,eol,start   
+
+:autocmd InsertEnter,InsertLeave * set cul!
+
+let g:ycm_cache_omnifunc = 1
+
+"NerdTree config
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 map <leader>e :NERDTreeFind<CR>
 nmap <leader>nt :NERDTreeFind<CR>
