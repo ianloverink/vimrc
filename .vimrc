@@ -75,6 +75,9 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "
 set ls=2
 
+"
+set showtabline=2
+
 "line numbers
 set nu
 
@@ -83,6 +86,12 @@ set nowrap
 
 "fancy color for terminal
 set term=xterm-256color
+
+"tab bindings
+nnoremap tk :tabp<CR>
+nnoremap tj  :tabn<CR>
+nnoremap tn   :tabnew<CR>
+
 
 syntax on
 
