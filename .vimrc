@@ -22,6 +22,8 @@ Bundle 'gmarik/vundle'
 
     "Better file browser
     Bundle 'scrooloose/nerdtree'
+    "Nerdtree tabs
+    Bundle 'jistr/vim-nerdtree-tabs'
     "Code commenter
     Bundle 'scrooloose/nerdcommenter'
     "Color Scheme
@@ -34,8 +36,11 @@ Bundle 'gmarik/vundle'
     Bundle 'scrooloose/syntastic'
     "Ctrl P
     Bundle 'kien/ctrlp.vim'
-
+    "Auto Complete
     Bundle 'Valloric/YouCompleteMe'
+    "CSV plugin
+    Bundle 'chrisbra/csv.vim'
+    
 
 "Bundles from Vim scripts
     
@@ -88,9 +93,9 @@ set nowrap
 set term=xterm-256color
 
 "tab bindings
-nnoremap tk :tabp<CR>
+nnoremap tk  :tabp<CR>
 nnoremap tj  :tabn<CR>
-nnoremap tn   :tabnew<CR>
+nnoremap tn  :tabnew<CR>
 
 
 syntax on
@@ -112,8 +117,7 @@ let NERDTreeQuitOnOpen=0
 let NERDTreeMouseMode=2
 let NERDTreeShowHidden=1
 let NERDTreeKeepTreeInNewTab=1
-autocmd VimEnter * NERDTree | wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "close nerdtree is it is last buffer
+let g:nerdtree_tabs_open_on_console_startup=1
 
 let g:Powerline_symbols = 'fancy'
 if has('gui_macvim')
