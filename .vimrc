@@ -27,7 +27,7 @@ Bundle 'gmarik/vundle'
     "Code commenter
     Bundle 'scrooloose/nerdcommenter'
     "Color Scheme
-    Bundle 'altercation/vim-colors-solarized'
+    Bundle 'flazz/vim-colorschemes'
     "Git integration
     Bundle 'tpope/vim-fugitive'
     "Powerline
@@ -36,8 +36,6 @@ Bundle 'gmarik/vundle'
     Bundle 'scrooloose/syntastic'
     "Ctrl P
     Bundle 'kien/ctrlp.vim'
-    "Auto Complete
-    Bundle 'Valloric/YouCompleteMe'
     "CSV plugin
     Bundle 'chrisbra/csv.vim'
     
@@ -60,7 +58,7 @@ filetype plugin on
 filetype indent on
 
 "rest of vim config
-color solarized
+color darktango
 set background=dark
 
 "default spacing
